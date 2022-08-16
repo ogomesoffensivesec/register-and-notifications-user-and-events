@@ -72,7 +72,7 @@ public class Main {
                     user.setEmail(email);
                     user.setContact(contact);
                     System.out.println("Usuário cadastrado com sucesso!");
-                    String path = "C:\\Users\\Manoel Junior\\IdeaProjects\\events\\users.data";
+                    String path = "\\events\\users.data";
                     String infoUsers = "Nome completo: " + user.getNome() + "\n" + "Usuário: " + user.getUser() + "\n" + "Data de Nascimento: " + user.getDatenasc() + "\n" + "Reside em: " + user.getCity() + "\n" + "Contato: " + user.getContact() + "\n" + "E-mail: " + user.getEmail() + "\n" + "Documento (RG OU CPF): " + user.getDocument();
                     ArchivesCRUD.writer(path, infoUsers);
                 } catch (Exception erro) {
@@ -103,7 +103,7 @@ public class Main {
                     event.setDescription(description);
                     event.setCategory(category);
                     event.setHour(hour);
-                    String path = "C:\\Users\\Manoel Junior\\IdeaProjects\\events\\events.data";
+                    String path = "\\events\\events.data"
                     String infoEvent = "Horário do Evento:" +  event.getHour() + "\n" + "Nome: " + event.getName() + "\n" + "Endereço: " +  event.getAddr() + "\n" + "Descrição: " + event.getDescription() + "\n" + "Categoria: " +event.getCategory() + "\n";
                     ArchivesCRUD.writer(path, infoEvent);
                     System.out.println("Evento adicionado com sucesso");
@@ -114,7 +114,7 @@ public class Main {
 
             //Visualizar eventos disponíveis
             else if (intescolha == 3) {
-                String path = "C:\\Users\\Manoel Junior\\IdeaProjects\\events\\events.data";
+                String path = "\\events\\events.data"
                 BufferedReader buffRead = new BufferedReader((new FileReader(path)));
                 String linha = buffRead.readLine();
                 Pattern pattern_data = Pattern.compile("(\\d{2}/\\d{2}/\\d{4})");
@@ -130,7 +130,8 @@ public class Main {
 
             //Participar de evento
             else if (intescolha == 6) {
-                String path = "C:\\Users\\Manoel Junior\\IdeaProjects\\events\\events.data";
+                String path = "\\events\\events.data"
+               
                 BufferedReader buffRead = new BufferedReader((new FileReader(path)));
                 String line = "";
                 while (true) {
@@ -149,7 +150,7 @@ public class Main {
                     System.out.println("Erro ao participar do evento: " + erro);
                 }
             } else if (intescolha == 000) {
-                String path = "C:\\Users\\Manoel Junior\\IdeaProjects\\events\\users.data";
+                String path = "\\events\\users.data";
                 BufferedReader buffRead = new BufferedReader(new FileReader(path));
                 String linha = "";
                 while (true){
